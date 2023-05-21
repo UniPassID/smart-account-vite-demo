@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@originjs/vite-plugin-commonjs": "^1.0.3",
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@vitejs/plugin-vue": "^4.1.0",

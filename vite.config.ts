@@ -27,21 +27,19 @@
 //   ],
 // })
 
-import { NodeModulesPolyfillPlugin } from "@esbuild-plugins/node-modules-polyfill";
 import vue from "@vitejs/plugin-vue";
 import builtins from "rollup-plugin-node-builtins";
 import rollupNodePolyFill from "rollup-plugin-node-polyfills";
 import commonjs from "@rollup/plugin-commonjs";
 import { defineConfig } from "vite";
+import { viteCommonjs } from "@originjs/vite-plugin-commonjs";
 
 export default defineConfig({
-  plugins: [commonjs({
-    include: [/node_modules/],
-    transformMixedEsModules: true
-  }), vue()],
+  plugins: [viteCommonjs(), vue()],
   server: {
     port: 3000,
   },
+  define: { global: {} },
   resolve: {
     alias: {
       // This Rollup aliases are extracted from @esbuild-plugins/node-modules-polyfill,
@@ -80,12 +78,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    force: true,
-    esbuildOptions: {
-      target: "es2020",
-      supported: { bigint: true },
-      plugins: [NodeModulesPolyfillPlugin()],
-    },
+    exclude: ["@solana/web3.js"],
   },
   build: {
     commonjsOptions: {
@@ -95,6 +88,7 @@ export default defineConfig({
     minify: false,
     target: "es2020",
     rollupOptions: {
+      external: ["@solana/web3.js"],
       plugins: [
         commonjs(),
         // Enable rollup polyfills plugin
