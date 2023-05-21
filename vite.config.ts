@@ -35,10 +35,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [commonjs({
-    include: [/node_modules/],
-    transformMixedEsModules: true
-  }), vue()],
+  plugins: [vue()],
   server: {
     port: 3000,
   },
@@ -96,7 +93,6 @@ export default defineConfig({
     target: "es2020",
     rollupOptions: {
       plugins: [
-        commonjs(),
         // Enable rollup polyfills plugin
         // used during production bundling
         builtins(),

@@ -34,8 +34,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    // "module": "ESNext",
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -45,4 +44,5 @@
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
+
 
