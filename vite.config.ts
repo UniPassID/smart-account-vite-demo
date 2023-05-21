@@ -77,6 +77,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
+    include: ['@unipasswallet/smart-account-signer'],
     force: true,
     esbuildOptions: {
       target: "es2020",
