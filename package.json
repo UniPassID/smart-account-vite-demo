@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@unipasswallet/smart-account": "0.1.0-alpha.2",
-    "@unipasswallet/smart-account-signer": "0.1.0-alpha.3",
+    "@unipasswallet/smart-account": "^0.1.0-alpha.2",
+    "@unipasswallet/smart-account-signer": "^0.1.0-alpha.4",
     "buffer": "^6.0.3",
     "elliptic": "^6.5.4",
     "ethers": "^5.7.1",
