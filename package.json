@@ -17,7 +17,8 @@
     "ethers": "^5.7.1",
     "process": "^0.11.10",
     "vue": "^3.2.47",
-    "vue3-google-login": "^2.0.15"
+    "vue3-google-login": "^2.0.15",
+    "vue3-spinners": "^1.2.2"
   },
   "devDependencies": {
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
